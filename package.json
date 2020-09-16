@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "install": "lerna bootstrap",
+    "api:install": "cd packages/api && npm install",
+    "gui:install": "cd packages/gui && npm install",
+    "start": "lerna run start --stream",
+    "api:start": "cd packages/api && npm start --stream",
+    "gui:build": "cd packages/gui && npm run build --stream"
+  },
+  "devDependencies": {
+    "lerna": "~3.20.2"
+  },
+  "dependencies": {}
+}
