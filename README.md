@@ -52,8 +52,8 @@ I used [lerna](https://github.com/lerna/lerna) to help with future development a
 ```
 git clone https://github.com/Orzzet/faster-dialogflow-updates
 cd faster-dialogflow-updates
-lerna install
-lerna start
+npm install
+npm start
 ```
 
 Then you need to move the credentials (the .json file) to faster-dialogflow-updates/packages/api/secret/dialogflow-secret.json
