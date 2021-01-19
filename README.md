@@ -27,9 +27,9 @@ First you need to download credentials for your project, you can do this in the 
   "client_x509_cert_url": ""
 }
 ```
-With remining fields filled.
+With all the fields filled.
 
-### Docker
+### [Option 1] Docker
 
 You need to install docker and then.
 
@@ -45,9 +45,17 @@ After that open your browser and go to localhost:80 (or the desired port).
 
 > I have also included the files needed to build the docker image. Keep in mind that the current process copy the api and gui folders with node_modules already installed, so before you build the image, you need to install all dependecies with `lerna install` from the root or `npm install` from inside each project.
 
-### Source
+### [Option 2] Source
 
 I used [lerna](https://github.com/lerna/lerna) to help with future development and to make the project easier to start running but the current use is minimal, you actually don't need it and can treat api and gui as two completely different projects. Still, I am going to explain how to use the app using lerna.
+
+If you don't have lerna installed, open the terminal and write:
+
+```
+npm i -D lerna
+```
+
+Then, to install this repo:
 
 ```
 git clone https://github.com/Orzzet/faster-dialogflow-updates
@@ -56,7 +64,7 @@ npm install
 npm start
 ```
 
-Then you need to move the credentials (the .json file) to faster-dialogflow-updates/packages/api/secret/dialogflow-secret.json
+Then you need to move the credentials (the .json file) to dialogflow-bulk-updates/packages/api/secret/dialogflow-secret.json. Remember to not expose this file by any means. You should only use this option self-hosted. Further development will provide a secure method to host this app in a public server.
 
 After that open your browser and go to localhost:80
 
